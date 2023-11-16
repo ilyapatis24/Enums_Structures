@@ -1,7 +1,6 @@
 # include <iostream>
 #include <locale.h>
 
-
 enum Months {
 	january = 1,
 	february,
