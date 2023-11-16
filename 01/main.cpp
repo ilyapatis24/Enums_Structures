@@ -1,5 +1,4 @@
-# include <iostream>
-#include <locale.h>
+ï»¿# include <iostream>
 
 enum Months {
 	january = 1,
@@ -21,36 +20,36 @@ void get_month() {
 	int user_month = 0;
 	Months month;
 	do {
-		std::cout << "Ââåäèòå íîìåð ìåñÿöà:" << " " << std::endl;
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¼ÐµÑÑÑ†Ð°:" << " " << std::endl;
 		std::cin >> user_month;
 		month = static_cast<Months>(user_month);
 		switch (month) {
-			case january: std::cout << "ßíâàðü" << std::endl; break;
-			case february: std::cout << "Ôåâðàëü" << std::endl; break;
-			case march: std::cout << "Ìàðò" << std::endl; break;
-			case april: std::cout << "Àïðåëü" << std::endl; break;
-			case may: std::cout << "Ìàé" << std::endl; break;
-			case june: std::cout << "Èþíü" << std::endl; break;
-			case july: std::cout << "Èþëü" << std::endl; break;
-			case august: std::cout << "Àâãóñò" << std::endl; break;
-			case september: std::cout << "Ñåíòÿáðü" << std::endl; break;
-			case october: std::cout << "Îêòÿáðü" << std::endl; break;
-			case november: std::cout << "Íîÿáðü" << std::endl; break;
-			case december: std::cout << "Äåêàáðü" << std::endl; break;
+			case january: std::cout << "Ð¯Ð½Ð²Ð°Ñ€ÑŒ" << std::endl; break;
+			case february: std::cout << "Ð¤ÐµÐ²Ñ€Ð°Ð»ÑŒ" << std::endl; break;
+			case march: std::cout << "ÐœÐ°Ñ€Ñ‚" << std::endl; break;
+			case april: std::cout << "ÐÐ¿Ñ€ÐµÐ»ÑŒ" << std::endl; break;
+			case may: std::cout << "ÐœÐ°Ð¹" << std::endl; break;
+			case june: std::cout << "Ð˜ÑŽÐ½ÑŒ" << std::endl; break;
+			case july: std::cout << "Ð˜ÑŽÐ»ÑŒ" << std::endl; break;
+			case august: std::cout << "ÐÐ²Ð³ÑƒÑÑ‚" << std::endl; break;
+			case september: std::cout << "Ð¡ÐµÐ½Ñ‚ÑÐ±Ñ€ÑŒ" << std::endl; break;
+			case october: std::cout << "ÐžÐºÑ‚ÑÐ±Ñ€ÑŒ" << std::endl; break;
+			case november: std::cout << "ÐÐ¾ÑÐ±Ñ€ÑŒ" << std::endl; break;
+			case december: std::cout << "Ð”ÐµÐºÐ°Ð±Ñ€ÑŒ" << std::endl; break;
 			default:
 				if (month == 0) {
 					break;
 				}
-				else { std::cout << "Íåïðàâèëüíûé íîìåð!" << std::endl; }
+				else { std::cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€!" << std::endl; }
 
 		}
 	} 
 	while (user_month != 0);
-	std::cout << "Äî ñâèäàíèÿ";
+	std::cout << "Ð”Ð¾ ÑÐ²Ð¸Ð´Ð°Ð½Ð¸Ñ";
 }
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Russian");
+	system("chcp 1251");
 	get_month();
 	return 0;
 }
